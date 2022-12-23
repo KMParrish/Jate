@@ -7,14 +7,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server",
-    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
+    "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\" ",
     "start": "npm run build && cd server && node server.js",
     "server": "cd server node server.js --ignore client",
     "build": "cd client && npm run build",
     "install": "cd client && npm install",
-    "client": "cd client && npm start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client": "cd client && npm start"
   },
   "repository": {
     "type": "git",
